@@ -75,6 +75,10 @@ export const mockData = {
         id: 1,
         oauthClientId: 'TEST_CLIENT_ID_1',
         scope: SCOPE_TYPE.SUPER_ADMIN
+    },
+    MOCK_SUBJECT: {
+        id: 1,
+        name: 'MATHS'
     }
 };
 

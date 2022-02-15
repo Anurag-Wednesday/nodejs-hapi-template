@@ -5,6 +5,11 @@ export const ONE_USER_DATA = {
     email: 'mac@wednesday.is'
 };
 
+export const ONE_SUBJECT_DATA = {
+    id: 1,
+    name: 'MATHS'
+};
+
 export const GRANT_TYPE = {
     CLIENT_CREDENTIALS: 'CLIENT_CREDENTIALS'
 };

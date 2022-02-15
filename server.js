@@ -18,7 +18,7 @@ import serverConfig from 'config/server';
 import dbConfig from 'config/db';
 import hapiPaginationOptions from 'utils/paginationConstants';
 import models from 'models';
-import { cachedUser } from 'utils/cacheMethods';
+import { cachedUser, cachedSubject } from 'utils/cacheMethods';
 
 const prepDatabase = async () => {
     await models.sequelize
@@ -122,6 +122,7 @@ const initServer = async () => {
     });
 
     await cachedUser(server);
+    await cachedSubject(server);
 
     // Register cors plugin
     await server.register({
