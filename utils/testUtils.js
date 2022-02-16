@@ -15,8 +15,15 @@ export function configDB(metadataOptions = DEFAULT_METADATA_OPTIONS) {
         'subjects',
         mockData.MOCK_SUBJECT
     );
-    subjectMock.findByPk = query => userMock.findById(query);
+    subjectMock.findByPk = query => subjectMock.findById(query);
     subjectMock.count = () => 1;
+
+    const userSubjectsMock = DBConnectionMock.define(
+        'user_subjects',
+        mockData.MOCK_USER_SUBJECTS
+    );
+    userSubjectsMock.findByPk = query => userSubjectsMock.findById(query);
+    userSubjectsMock.count = () => 1;
 
     const oauthClientsMock = DBConnectionMock.define(
         'oauth_clients',
@@ -54,6 +61,7 @@ export function configDB(metadataOptions = DEFAULT_METADATA_OPTIONS) {
     return {
         users: userMock,
         subjects: subjectMock,
+        user_subjects: userSubjectsMock,
         oauth_clients: oauthClientsMock,
         oauth_access_tokens: oauthAccessTokensMock,
         oauth_client_resources: oauthClientResourcesMock,

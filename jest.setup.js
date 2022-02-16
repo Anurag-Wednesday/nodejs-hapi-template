@@ -1,7 +1,11 @@
 /* global server */
 import { init } from './lib/testServer';
 import { mockDB } from 'utils/testUtils';
-import { ONE_USER_DATA, ONE_SUBJECT_DATA } from 'utils/constants';
+import {
+    ONE_USER_DATA,
+    ONE_SUBJECT_DATA,
+    ONE_USER_SUBJECT_DATA
+} from 'utils/constants';
 
 require('jest-extended');
 
@@ -30,6 +34,15 @@ beforeAll(() => {
                     if (id === '1') {
                         return new Promise(resolve =>
                             resolve(ONE_SUBJECT_DATA)
+                        );
+                    } else {
+                        return new Promise(resolve => resolve(null));
+                    }
+                },
+                findOneUserSubject: id => {
+                    if (id === '1') {
+                        return new Promise(resolve =>
+                            resolve(ONE_USER_SUBJECT_DATA)
                         );
                     } else {
                         return new Promise(resolve => resolve(null));

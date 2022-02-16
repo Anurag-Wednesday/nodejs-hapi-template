@@ -79,6 +79,11 @@ export const mockData = {
     MOCK_SUBJECT: {
         id: 1,
         name: 'MATHS'
+    },
+    MOCK_USER_SUBJECTS: {
+        id: 1,
+        userId: '1',
+        subjectId: '1'
     }
 };
 
