@@ -45,3 +45,5 @@ export const DEFAULT_METADATA_OPTIONS = {
     scope: SCOPE_TYPE.ADMIN,
     resourceType: OAUTH_CLIENT_ID
 };
+
+export const MAX_VALUE_OF_SIGNED_INT = 2147483647;
