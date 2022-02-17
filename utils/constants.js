@@ -5,6 +5,17 @@ export const ONE_USER_DATA = {
     email: 'mac@wednesday.is'
 };
 
+export const ONE_SUBJECT_DATA = {
+    id: 1,
+    name: 'MATHS'
+};
+
+export const ONE_USER_SUBJECT_DATA = {
+    id: 1,
+    user_id: '1',
+    subject_id: '1'
+};
+
 export const GRANT_TYPE = {
     CLIENT_CREDENTIALS: 'CLIENT_CREDENTIALS'
 };
@@ -40,3 +51,5 @@ export const DEFAULT_METADATA_OPTIONS = {
     scope: SCOPE_TYPE.ADMIN,
     resourceType: OAUTH_CLIENT_ID
 };
+
+export const MAX_VALUE_OF_SIGNED_INT = 2147483647;
