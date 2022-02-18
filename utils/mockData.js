@@ -82,8 +82,8 @@ export const mockData = {
     },
     MOCK_USER_SUBJECTS: {
         id: 1,
-        userId: '1',
-        subjectId: '1'
+        userId: 1,
+        subjectId: 2
     }
 };
 
